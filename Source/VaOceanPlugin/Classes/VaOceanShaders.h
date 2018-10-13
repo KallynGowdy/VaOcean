@@ -16,7 +16,7 @@
 // UpdateSpectrumCS compute shader
 
 BEGIN_UNIFORM_BUFFER_STRUCT(FUpdateSpectrumUniformParameters, )
-DECLARE_UNIFORM_BUFFER_STRUCT_MEMBER(float, Time)
+UNIFORM_MEMBER(float, Time)
 END_UNIFORM_BUFFER_STRUCT(FUpdateSpectrumUniformParameters)
 
 typedef TUniformBufferRef<FUpdateSpectrumUniformParameters> FUpdateSpectrumUniformBufferRef;
@@ -181,11 +181,11 @@ private:
 // Radix008A_CS compute shader
 
 BEGIN_UNIFORM_BUFFER_STRUCT(FRadixFFTUniformParameters, )
-DECLARE_UNIFORM_BUFFER_STRUCT_MEMBER(uint32, ThreadCount)
-DECLARE_UNIFORM_BUFFER_STRUCT_MEMBER(uint32, ostride)
-DECLARE_UNIFORM_BUFFER_STRUCT_MEMBER(uint32, istride)
-DECLARE_UNIFORM_BUFFER_STRUCT_MEMBER(uint32, pstride)
-DECLARE_UNIFORM_BUFFER_STRUCT_MEMBER(float, PhaseBase)
+UNIFORM_MEMBER(uint32, ThreadCount)
+UNIFORM_MEMBER(uint32, ostride)
+UNIFORM_MEMBER(uint32, istride)
+UNIFORM_MEMBER(uint32, pstride)
+UNIFORM_MEMBER(float, PhaseBase)
 END_UNIFORM_BUFFER_STRUCT(FRadixFFTUniformParameters)
 
 typedef TUniformBufferRef<FRadixFFTUniformParameters> FRadixFFTUniformBufferRef;
@@ -339,8 +339,8 @@ public:
 // Post-FFT data wrap up: Dx, Dy, Dz -> Displacement
 
 BEGIN_UNIFORM_BUFFER_STRUCT(FUpdateDisplacementUniformParameters, )
-DECLARE_UNIFORM_BUFFER_STRUCT_MEMBER(float, ChoppyScale)
-DECLARE_UNIFORM_BUFFER_STRUCT_MEMBER(float, GridLen)
+UNIFORM_MEMBER(float, ChoppyScale)
+UNIFORM_MEMBER(float, GridLen)
 END_UNIFORM_BUFFER_STRUCT(FUpdateDisplacementUniformParameters)
 
 typedef TUniformBufferRef<FUpdateDisplacementUniformParameters> FUpdateDisplacementUniformBufferRef;
