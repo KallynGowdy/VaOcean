@@ -20,31 +20,31 @@ struct FSpectrumData
 	int32 DispMapDimension;
 
 	/** The side length (world space) of square patch. Typical value is 1000 ~ 2000. */
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float PatchLength;
 
 	/** Adjust the time interval for simulation (controls the simulation speed) */
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float TimeScale;
 
 	/** Amplitude for transverse wave. Around 1.0 (not the world space height). */
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float WaveAmplitude;
 
 	/** Wind direction. Normalization not required */
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	FVector2D WindDirection;
 
 	/** The bigger the wind speed, the larger scale of wave crest. But the wave scale can be no larger than PatchLength. Around 100 ~ 1000 */
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float WindSpeed;
 
 	/** This value damps out the waves against the wind direction. Smaller value means higher wind dependency. */
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float WindDependency;
 
 	/** The amplitude for longitudinal wave. Higher value creates pointy crests. Must be positive. */
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float ChoppyScale;
 
 	/** Defaults */
